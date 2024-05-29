@@ -5,23 +5,50 @@ metadata:
 data:
   index.html: |
     <!DOCTYPE html>
-    <html>
+    <html lang="fr">
     <head>
-      <title>Nginx Managed by ArgoCD</title>
-      <style>
-        body {
-          width: 35em;
-          margin: 0 auto;
-          font-family: Tahoma, Verdana, Arial, sans-serif;
-        }
-      </style>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ma Page HTML avec Variable d'Environnement</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f2f2f2;
+            }
+            
+            .container {
+                max-width: 800px;
+                margin: 50px auto;
+                background-color: #fff;
+                border-radius: 10px;
+                padding: 20px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            
+            h1 {
+                color: #333;
+                text-align: center;
+            }
+            
+            p {
+                font-size: 18px;
+                color: #666;
+                line-height: 1.6;
+            }
+        </style>
     </head>
     <body>
-      <h1>Nginx Managed by ArgoCD</h1>
-      <h1>Current version 2.0.0</h1>
-      <p>If you see this page, the nginx web server is successfully installed and managed by ArgoCD.</p>
-      <p>For online documentation and support please refer to <a href="http://nginx.org/">nginx.org</a>.<br/>
-      Commercial support is available at <a href="http://nginx.com/">nginx.com</a>.</p>
-      <p><em>Thank you for using nginx.</em></p>
+        <div class="container">
+            <h1> Demo app !</h1>
+            <p> Version : <span id="envVariable"></span></p>
+        </div>
+    
+        <script>
+            // Récupérer la valeur de la variable d'environnement et l'insérer dans la page
+            document.getElementById('envVariable').textContent = process.env.VERSION || 'Non définie';
+        </script>
     </body>
     </html>
+
