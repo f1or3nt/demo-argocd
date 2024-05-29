@@ -23,6 +23,9 @@ spec:
         - name: nginx-index
           mountPath: /usr/share/nginx/html/index.html
           subPath: index.html
+        env:  # Ajout de la variable d'environnement ici
+        - name: VERSION
+          value: "1.0.0"
       volumes:
       - name: nginx-index
         configMap:
