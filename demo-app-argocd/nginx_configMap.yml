@@ -5,51 +5,23 @@ metadata:
 data:
   index.html: |
     <!DOCTYPE html>
-    <html lang="fr">
+    <html>
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ma Page HTML avec Variable d'Environnement</title>
+        <title>ArgoCD-demo</title>
       <style>
-          body {
-              font-family: Arial, sans-serif;
-              margin: 0;
-              padding: 0;
-              background-color: #f2f2f2;
-              color: #333; /* Couleur par défaut du texte */
-          }
-          
-          .container {
-              max-width: 800px;
-              margin: 50px auto;
-              background-color: #fff;
-              border-radius: 10px;
-              padding: 20px;
-              box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-          }
-          
-          h1 {
-              color: red; /* Couleur rouge pour le titre */
-              text-align: center;
-          }
-          
-          p {
-              font-size: 18px;
-              color: black; /* Couleur noire pour le texte principal */
-              line-height: 1.6;
-          }
+        body {
+          width: 35em;
+          margin: 0 auto;
+          font-family: Tahoma, Verdana, Arial, sans-serif;
+        }
       </style>
     </head>
     <body>
-        <div class="container">
-            <h1> Demo app !</h1>
-            <p> Version : <span id="envVariable"></span></p>
-        </div>
-    
-        <script>
-            // Récupérer la valeur de la variable d'environnement et l'insérer dans la page
-            document.getElementById('envVariable').textContent = process.env.VERSION || 'Non définie';
-        </script>
+      <h1>ArgoCD-demo</h1>
+      <p>If you see this page, the nginx web server is successfully installed and managed by ArgoCD.</p>
+      <p>For online documentation and support please refer to <a href="http://nginx.org/">nginx.org</a>.<br/>
+      Commercial support is available at <a href="http://nginx.com/">nginx.com</a>.</p>
+      <p><em>Thank you for using nginx.</em></p>
     </body>
     </html>
 
